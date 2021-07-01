@@ -8,14 +8,14 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 15%;
+    width: 90%;
 }
 
 .vid{
     display: block;
     width: 90%;
     margin-left: auto;
-    margin-right:auto;
+    marginright:auto;
     margin-bottom: 1rem;
     border: 2px rgb(0, 0, 0) solid;
 }
