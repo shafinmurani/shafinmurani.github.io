@@ -51,7 +51,7 @@ const Header = () => {
     fontWeight: "light",
   };
   return (
-    <Router>
+    <Router basename="/">
       <div style={isDesktop ? desktopStyle : mobileStyle}>
         <ThemeProvider theme={theme}>
           <Typography
