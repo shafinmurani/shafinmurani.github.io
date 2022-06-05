@@ -46,8 +46,38 @@ const CertCarousel = () => {
       swipeable
       autoFocus
     >
-      <div>
+      {/* <div>
         <img src={cert1} />
+      </div> */}
+      <div>
+        <img src={cert6} />
+      </div>
+      <div>
+        <img src={cert19} />
+      </div>
+      <div>
+        <img src={cert21} />
+      </div>
+      <div>
+        <img src={cert22} />
+      </div>
+      <div>
+        <img src={cert9} />
+      </div>
+      <div>
+        <img src={cert12} />
+      </div>
+      <div>
+        <img src={cert16} />
+      </div>
+      <div>
+        <img src={cert17} />
+      </div>
+      <div>
+        <img src={cert13} />
+      </div>
+      <div>
+        <img src={cert11} />
       </div>
       <div>
         <img src={cert2} />
@@ -62,61 +92,16 @@ const CertCarousel = () => {
         <img src={cert5} />
       </div>
       <div>
-        <img src={cert6} />
-      </div>
-      <div>
         <img src={cert7} />
       </div>
-      <div>
-        <img src={cert19} />
-      </div>
-      <div>
-        <img src={cert9} />
-      </div>
-      <div>
+      {/* <div>
         <img src={cert10} />
-      </div>
-      <div>
-        <img src={cert11} />
-      </div>
-      <div>
-        <img src={cert12} />
-      </div>
-      <div>
-        <img src={cert13} />
-      </div>
+      </div> */}
       <div>
         <img src={cert14} />
       </div>
       <div>
         <img src={cert15} />
-      </div>
-      <div>
-        <img src={cert16} />
-      </div>
-      <div>
-        <img src={cert17} />
-      </div>
-      <div>
-        <img src={cert18} />
-      </div>
-      <div>
-        <img src={cert8} />
-      </div>
-      <div>
-        <img src={cert20} />
-      </div>
-      <div>
-        <img src={cert21} />
-      </div>
-      <div>
-        <img src={cert22} />
-      </div>
-      <div>
-        <img src={cert23} />
-      </div>
-      <div>
-        <img src={cert24} />
       </div>
       <div>
         <img src={cert25} />
@@ -136,6 +121,21 @@ const CertCarousel = () => {
       <div>
         <img src={cert30} />
       </div>
+      <div>
+        <img src={cert18} />
+      </div>
+      <div>
+        <img src={cert23} />
+      </div>
+      <div>
+        <img src={cert24} />
+      </div>
+      {/* <div>
+        <img src={cert8} />
+      </div> */}
+      {/* <div>
+        <img src={cert20} />
+      </div> */}
     </Carousel>
   );
 };
