@@ -63,12 +63,27 @@ export default function Contact() {
           // orientation="vertical"
           variant={isDesktop ? "" : "fullWidth"}
           centered
+          TabIndicatorProps={{
+            style: {
+              backgroundColor: "#092626",
+              color: "#092626",
+            },
+          }}
+          // inkBarStyle={{ color: "#092626" }}
           value={value}
           onChange={handleChange}
           aria-label="Contact Tabs"
         >
-          <Tab label="Contact Information" {...a11yProps(0)} />
-          <Tab label="Social Media" {...a11yProps(1)} />
+          <Tab
+            style={value === 0 ? { color: "#092626" } : {}}
+            label="Contact Information"
+            {...a11yProps(0)}
+          />
+          <Tab
+            style={value === 1 ? { color: "#092626" } : {}}
+            label="Social Media"
+            {...a11yProps(1)}
+          />
           {/* <Tab label="Item Three" {...a11yProps(2)} /> */}
         </Tabs>
       </Box>
@@ -89,12 +104,13 @@ export default function Contact() {
             size="large"
             variant="contained"
             color="primary"
+            style={{ backgroundColor: "#092626" }}
           >
             <CallIcon />
             Call Me
           </Button>
           <Button
-            style={{ marginTop: "1rem" }}
+            style={{ marginTop: "1rem", backgroundColor: "#092626" }}
             size="large"
             variant="contained"
             color="primary"
@@ -103,7 +119,7 @@ export default function Contact() {
             <EmailIcon /> Email
           </Button>
           <Button
-            style={{ marginTop: "1rem" }}
+            style={{ marginTop: "1rem", backgroundColor: "#092626" }}
             size="large"
             variant="contained"
             color="primary"
@@ -135,6 +151,7 @@ export default function Contact() {
           >
             <Grid item>
               <Button
+                style={{ backgroundColor: "#092626" }}
                 href="https://instagram.com/shafin_murani"
                 size="large"
                 variant="contained"
@@ -145,6 +162,7 @@ export default function Contact() {
             </Grid>
             <Grid item>
               <Button
+                style={{ backgroundColor: "#092626" }}
                 href="https://github.com/shafinmurani"
                 // style={{ marginTop: "1rem" }}
                 size="large"
@@ -156,6 +174,7 @@ export default function Contact() {
             </Grid>
             <Grid item>
               <Button
+                style={{ backgroundColor: "#092626" }}
                 href="https://twitter.com/ShafinMurani"
                 // style={{ marginTop: "1rem" }}
                 size="large"

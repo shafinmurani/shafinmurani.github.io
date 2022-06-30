@@ -25,14 +25,14 @@ const About = () => {
     query: "(min-width: 768px)",
   });
   const style = {
-    color: "#8D7257",
+    color: "#854E60",
     textAlign: "center",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-around",
   };
   const mobileStyle = {
-    color: "#8D7257",
+    color: "#854E60",
     textAlign: "center",
     display: "flex",
     alignItems: "center",
@@ -53,7 +53,7 @@ const About = () => {
         <ThemeProvider theme={Heading}>
           <Typography
             variant="h3"
-            style={{ color: "#753600", textAlign: "center", marginTop: "1rem" }}
+            style={{ color: "#8A1D00", textAlign: "center", marginTop: "1rem" }}
           >
             About me
           </Typography>
@@ -66,7 +66,7 @@ const About = () => {
               marginTop: "2rem",
               width: "80%",
               marginInline: "auto",
-              backgroundColor: "#36454F",
+              backgroundColor: "#092626",
               borderRadius: "1rem",
               border: "none",
             }}
@@ -92,7 +92,7 @@ const About = () => {
                         textAlign: "center",
                       }
                     : {
-                        fontSize: "1.3rem",
+                        fontSize: "1rem",
                         color: "#fff",
                         // fontWeight: "normal",
                         // marginTop: "4rem",
@@ -124,7 +124,7 @@ const About = () => {
               marginTop: "1rem",
               width: "80%",
               marginInline: "auto",
-              backgroundColor: "#36454F",
+              backgroundColor: "#092626",
               borderRadius: "1rem",
               border: "none",
             }}
@@ -150,7 +150,7 @@ const About = () => {
                         textAlign: "center",
                       }
                     : {
-                        fontSize: "1.3rem",
+                        fontSize: "1rem",
                         color: "#fff",
                         // fontWeight: "normal",
                         // marginTop: "4rem",
@@ -173,7 +173,7 @@ const About = () => {
               marginTop: "1rem",
               width: "80%",
               marginInline: "auto",
-              backgroundColor: "#36454F",
+              backgroundColor: "#092626",
               borderRadius: "1rem",
               border: "none",
             }}
@@ -199,7 +199,7 @@ const About = () => {
                         textAlign: "center",
                       }
                     : {
-                        fontSize: "1.3rem",
+                        fontSize: "1rem",
                         color: "#fff",
                         // fontWeight: "normal",
                         // marginTop: "4rem",
@@ -221,7 +221,7 @@ const About = () => {
               marginTop: "1rem",
               width: "80%",
               marginInline: "auto",
-              backgroundColor: "#36454F",
+              backgroundColor: "#092626",
               borderRadius: "1rem",
               border: "none",
             }}
@@ -247,7 +247,7 @@ const About = () => {
                         textAlign: "center",
                       }
                     : {
-                        fontSize: "1.3rem",
+                        fontSize: "1rem",
                         color: "#fff",
                         // fontWeight: "normal",
                         // marginTop: "4rem",

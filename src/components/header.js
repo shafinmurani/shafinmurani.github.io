@@ -22,7 +22,7 @@ const Header = () => {
     },
   });
   const desktopStyle = {
-    backgroundColor: "#36454F",
+    backgroundColor: "#0D2A2A",
     color: "white",
     padding: "1rem",
     display: "flex",
@@ -30,7 +30,7 @@ const Header = () => {
     alignItems: "center",
   };
   const mobileStyle = {
-    backgroundColor: "#36454F",
+    backgroundColor: "#0D2A2A",
     color: "white",
     padding: "2rem",
     display: "flex",
@@ -40,6 +40,7 @@ const Header = () => {
     alignItems: "center",
   };
   const mobileLinkStyle = {
+    fontSize: "1rem",
     color: "white",
     textDecoration: "none",
     fontWeight: "light",

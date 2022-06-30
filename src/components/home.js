@@ -21,14 +21,14 @@ const Home = () => {
     query: "(min-width: 768px)",
   });
   const style = {
-    color: "#8D7257",
+    color: "#854E60",
     textAlign: "center",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-around",
   };
   const mobileStyle = {
-    color: "#8D7257",
+    color: "#854E60",
     textAlign: "center",
     display: "flex",
     alignItems: "center",
@@ -46,7 +46,7 @@ const Home = () => {
         <ThemeProvider theme={Heading}>
           <Typography
             variant="h3"
-            style={{ color: "#753600", textAlign: "center", marginTop: "2rem" }}
+            style={{ color: "#8A1D00", textAlign: "center", marginTop: "2rem" }}
           >
             Welcome
           </Typography>
@@ -85,7 +85,7 @@ const Home = () => {
               marginTop: "6rem",
               width: "80%",
               marginInline: "auto",
-              backgroundColor: "#36454F",
+              backgroundColor: "#092626",
               borderRadius: "1rem",
               border: "none",
             }}
@@ -111,7 +111,7 @@ const Home = () => {
                         textAlign: "center",
                       }
                     : {
-                        fontSize: "1.3rem",
+                        fontSize: "1rem",
                         color: "#fff",
                         // fontWeight: "normal",
                         // marginTop: "4rem",
