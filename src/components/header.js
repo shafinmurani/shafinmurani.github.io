@@ -36,15 +36,18 @@ const routes = [
 ];
 const Header = () => {
   const [itterator, setItterator] = React.useState(0);
+  const [value, setValue] = React.useState("Home");
   const pathName = window.location.pathname;
-  const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   if (itterator == 0) {
     if (pathName == "/") {
-      setValue(0);
+      setValue("Home");
     } else if (pathName == "/contact") {
-      setValue(2);
+      setValue("Contact Me");
     } else if (pathName == "/about") {
-      setValue(1);
+      setValue("About Me");
     }
     setItterator(1);
   }
@@ -108,7 +111,7 @@ const Header = () => {
           >
             <BottomNavigation
               style={{ height: "4rem" }}
-              showLabels
+              // showLabels
               value={value}
               onChange={(event, newValue) => {
                 setValue(newValue);
@@ -118,11 +121,13 @@ const Header = () => {
                 component={Link}
                 to="/"
                 label="Home"
+                value="Home"
                 icon={<HomeIcon />}
               />
               <BottomNavigationAction
                 component={Link}
                 to="/about"
+                value="About me"
                 label="About Me"
                 icon={<InfoIcon />}
               />
@@ -130,6 +135,7 @@ const Header = () => {
                 component={Link}
                 to="/contact"
                 label="Contact Me"
+                value="Contact Me"
                 icon={<ContactPageIcon />}
               />
             </BottomNavigation>
