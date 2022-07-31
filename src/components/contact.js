@@ -75,16 +75,15 @@ export default function Contact() {
           aria-label="Contact Tabs"
         >
           <Tab
-            style={value === 0 ? { color: "#092626" } : {}}
+            style={value === 0 ? { color: "#092626" } : { color: "#092626" }}
             label="Contact Information"
             {...a11yProps(0)}
           />
           <Tab
-            style={value === 1 ? { color: "#092626" } : {}}
+            style={value === 1 ? { color: "#092626" } : { color: "#092626" }}
             label="Social Media"
             {...a11yProps(1)}
           />
-          {/* <Tab label="Item Three" {...a11yProps(2)} /> */}
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -104,13 +103,17 @@ export default function Contact() {
             size="large"
             variant="contained"
             color="primary"
-            style={{ backgroundColor: "#092626" }}
+            style={{ backgroundColor: "#092626", color: "white" }}
           >
             <CallIcon />
             Call Me
           </Button>
           <Button
-            style={{ marginTop: "1rem", backgroundColor: "#092626" }}
+            style={{
+              marginTop: "1rem",
+              backgroundColor: "#092626",
+              color: "white",
+            }}
             size="large"
             variant="contained"
             color="primary"
@@ -119,7 +122,11 @@ export default function Contact() {
             <EmailIcon /> Email
           </Button>
           <Button
-            style={{ marginTop: "1rem", backgroundColor: "#092626" }}
+            style={{
+              marginTop: "1rem",
+              backgroundColor: "#092626",
+              color: "white",
+            }}
             size="large"
             variant="contained"
             color="primary"
@@ -151,7 +158,7 @@ export default function Contact() {
           >
             <Grid item>
               <Button
-                style={{ backgroundColor: "#092626" }}
+                style={{ backgroundColor: "#092626", color: "white" }}
                 href="https://instagram.com/shafin_murani"
                 size="large"
                 variant="contained"
@@ -162,7 +169,7 @@ export default function Contact() {
             </Grid>
             <Grid item>
               <Button
-                style={{ backgroundColor: "#092626" }}
+                style={{ backgroundColor: "#092626", color: "white" }}
                 href="https://github.com/shafinmurani"
                 // style={{ marginTop: "1rem" }}
                 size="large"
@@ -174,7 +181,7 @@ export default function Contact() {
             </Grid>
             <Grid item>
               <Button
-                style={{ backgroundColor: "#092626" }}
+                style={{ backgroundColor: "#092626", color: "white" }}
                 href="https://twitter.com/ShafinMurani"
                 // style={{ marginTop: "1rem" }}
                 size="large"
