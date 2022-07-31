@@ -127,7 +127,7 @@ const Header = () => {
               <BottomNavigationAction
                 component={Link}
                 to="/about"
-                value="About me"
+                value="About Me"
                 label="About Me"
                 icon={<InfoIcon />}
               />
