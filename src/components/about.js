@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { useMediaQuery } from "react-responsive";
 import shafin from "../img/shafin.jpg";
 import { Route, Link, BrowserRouter as Router, Routes } from "react-router-dom";
@@ -134,7 +134,7 @@ const About = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography style={{ color: "white" }}>What do I do</Typography>
+              <Typography style={{ color: "white" }}>My projects</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography
@@ -160,10 +160,39 @@ const About = () => {
                       }
                 }
               >
-                As a Web developer and cyber security enthusiast, It is my
-                passion to explore deeper into the field of IT and hence, I work
-                everyday to develop and guide my acquaintances and collegues
-                towards making or doing something new and exciting everyday.
+                I have worked on several projects for betterment of my skills.
+                Here are the links to some on my best works :<br />
+                <Button
+                  style={{ marginTop: "1rem" }}
+                  variant="contained"
+                  href="https://vartarevarta.com"
+                >
+                  VartaReVarta Magazine Website
+                </Button>
+                <br />
+                <Button
+                  style={{ marginTop: "1rem" }}
+                  variant="contained"
+                  href="https://shafinmurani.github.io/weather-app"
+                >
+                  Weather Web application
+                </Button>
+                <br />
+                <Button
+                  style={{ marginTop: "1rem" }}
+                  variant="contained"
+                  href="https://shafinmurani.github.io/notekeeper"
+                >
+                  Notekeeping application(persistent)
+                </Button>
+                <br />
+                <Button
+                  style={{ marginTop: "1rem" }}
+                  variant="contained"
+                  href="https://shafinmurani.github.io/twitter-ui-clone"
+                >
+                  Twitter UI Clone
+                </Button>
               </Typography>
             </AccordionDetails>
           </Accordion>

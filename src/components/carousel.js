@@ -31,6 +31,7 @@ import cert27 from "../img/png/27.png";
 import cert28 from "../img/png/28.png";
 import cert29 from "../img/png/29.png";
 import cert30 from "../img/png/30.png";
+import cert31 from "../img/png/31.jpg";
 import { Carousel } from "react-responsive-carousel";
 
 const CertCarousel = () => {
@@ -45,6 +46,7 @@ const CertCarousel = () => {
       emulateTouch
       swipeable
       autoFocus
+      showThumbs={false}
     >
       {/* <div>
         <img src={cert1} />
@@ -54,6 +56,9 @@ const CertCarousel = () => {
       </div>
       <div>
         <img src={cert19} />
+      </div>
+      <div>
+        <img src={cert31} />
       </div>
       <div>
         <img src={cert21} />
