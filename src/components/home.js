@@ -38,7 +38,7 @@ export default function Home() {
           !isTabletOrMobile
             ? {
                 position: "absolute",
-                top: "-4rem",
+                top: "-10rem",
                 left: "50%",
                 transform: "translate(-50%,50%)",
                 textAlign: "center",
@@ -48,7 +48,7 @@ export default function Home() {
               }
             : {
                 position: "absolute",
-                top: "-4rem",
+                top: "-10rem",
                 left: "50%",
                 transform: "translate(-50%,50%)",
                 textAlign: "center",

@@ -12,6 +12,7 @@ import { styled } from "@mui/material/styles";
 import { motion } from "framer-motion";
 import InsertLinkRoundedIcon from "@mui/icons-material/InsertLinkRounded";
 import CertCarousel from "./carousel";
+import React from "react";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1e1e1e" : "#fff",
