@@ -1,145 +1,88 @@
-import { Typography } from "@mui/material";
+import Wave from "react-wavify";
+import { Button } from "@mui/material";
 import { useMediaQuery } from "react-responsive";
+import { ArrowDownwardRounded } from "@mui/icons-material";
 import shafin from "../img/shafin.jpg";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { createMuiTheme, ThemeProvider } from "@mui/material";
-const Home = () => {
-  const theme = createMuiTheme({
-    typography: {
-      fontFamily: ["Rubik", "sans-serif"].join(","),
-    },
-  });
-  const Heading = createMuiTheme({
-    typography: {
-      fontFamily: ["NeonderTHaw", "cursive"].join(","),
-    },
-  });
-  const isDesktop = useMediaQuery({
-    query: "(min-width: 768px)",
-  });
-  const style = {
-    color: "#854E60",
-    textAlign: "center",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-around",
-  };
-  const mobileStyle = {
-    color: "#854E60",
-    textAlign: "center",
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-    justifyContent: "space-around",
-  };
-  const imgStyle = {
-    maxWidth: "10rem",
-    marginTop: "2rem",
-    borderRadius: "10rem",
-  };
+export default function Home() {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+
   return (
-    <>
-      <div style={{ paddingBottom: "2rem" }}>
-        <ThemeProvider theme={Heading}>
-          <Typography
-            variant="h3"
-            style={{ color: "#8A1D00", textAlign: "center", marginTop: "2rem" }}
-          >
-            Welcome
-          </Typography>
-        </ThemeProvider>
-        <div style={isDesktop ? style : mobileStyle}>
-          <img style={imgStyle} src={shafin} />
-          <div>
-            <ThemeProvider theme={theme}>
-              <Typography
-                variant="h5"
-                style={{ fontWeight: "bold", marginTop: "2rem" }}
-              >
-                Shafin Murani
-              </Typography>
-              <Typography
-                variant="h6"
-                style={
-                  isDesktop
-                    ? { fontWeight: "light", marginTop: "0.2rem" }
-                    : {
-                        fontWeight: "light",
-                        marginTop: "0.2rem",
-                        fontSize: "1.4rem",
-                      }
-                }
-              >
-                Full-stack Developer, Ethical Hacker
-              </Typography>
-            </ThemeProvider>
-          </div>
-        </div>
-        <ThemeProvider theme={theme}>
-          <Accordion
-            defaultExpanded
-            style={{
-              marginTop: "6rem",
-              width: "80%",
-              marginInline: "auto",
-              backgroundColor: "#092626",
-              borderRadius: "1rem",
-              border: "none",
-            }}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "#fff" }} />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography style={{ color: "white" }}>Who am I</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography
-                // variant="caption"
-                style={
-                  isDesktop
-                    ? {
-                        color: "#fff",
-                        // fontWeight: "normal",
-                        // marginTop: "4rem",
-                        width: "80%",
-                        marginInline: "auto",
-                        textAlign: "center",
-                      }
-                    : {
-                        fontSize: "1rem",
-                        color: "#fff",
-                        // fontWeight: "normal",
-                        // marginTop: "4rem",
-                        width: "80%",
-                        marginInline: "auto",
-                        textAlign: "center",
-                      }
-                }
-              >
-                I am Shafin Murani, A student and a freelance developer from
-                India. I have a deep drive towards developing and tinkering with
-                new pieces of technology.
-                <br />
-                <br />
-                As I see it privacy and anonimity of an individual or a
-                community is really important hence, I dived into cyber
-                security.
-                <br />
-                <br />
-                As a cyber security point of view and where I stand in the field
-                I believe in making lives of people private and secure from an
-                angle that everyone overlooks.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        </ThemeProvider>
+    <div
+      style={{
+        backgroundColor: "transparent",
+        position: "relative",
+        width: "100%",
+        zTndex: 0,
+        overflowX: "hidden",
+      }}
+    >
+      <Wave
+        style={{
+          height: "90vh",
+          zIndex: 5,
+          margin: 0,
+          transform: "rotate(180deg)",
+          left: 0,
+        }}
+        fill="#3D3B4A"
+        paused={false}
+        options={{
+          height: 20,
+          amplitude: 45,
+          speed: 0.1,
+          points: 5,
+        }}
+      />
+      <div
+        style={
+          !isTabletOrMobile
+            ? {
+                position: "absolute",
+                top: "-4rem",
+                left: "50%",
+                transform: "translate(-50%,50%)",
+                textAlign: "center",
+                width: "60%",
+                paddingLeft: "7%",
+                paddingRight: "5%",
+              }
+            : {
+                position: "absolute",
+                top: "-4rem",
+                left: "50%",
+                transform: "translate(-50%,50%)",
+                textAlign: "center",
+                width: "70%",
+                paddingLeft: "7%",
+                paddingRight: "5%",
+              }
+        }
+      >
+        <img
+          src={shafin}
+          style={{ maxWidth: "10rem", borderRadius: "50%" }}
+        ></img>
+        <h1>
+          Hi, I'm <em style={{ color: "#8685EF" }}>Shafin Murani</em>.
+        </h1>
+        <h3>
+          A <em style={{ color: "#8685EF" }}>Web Developer</em> and Computer
+          Science student from Gujarat, India.
+        </h3>
+        <Button
+          startIcon={<ArrowDownwardRounded />}
+          variant="contained"
+          onClick={() => {
+            window.scrollTo({
+              top: 600,
+              behavior: "smooth",
+            });
+          }}
+          style={{ backgroundColor: "#ACA9BB" }}
+        >
+          Know More
+        </Button>
       </div>
-    </>
+    </div>
   );
-};
-export default Home;
+}

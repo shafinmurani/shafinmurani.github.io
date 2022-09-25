@@ -1,331 +1,206 @@
-import { Button, Typography } from "@mui/material";
-import { useMediaQuery } from "react-responsive";
-import shafin from "../img/shafin.jpg";
-import { Route, Link, BrowserRouter as Router, Routes } from "react-router-dom";
-import { useEffect } from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
+import {
+  Button,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+  Grid,
+  Paper,
+} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { createMuiTheme, ThemeProvider } from "@mui/material";
-import CertCaeousel from "./carousel";
+import { styled } from "@mui/material/styles";
+import { motion } from "framer-motion";
+import InsertLinkRoundedIcon from "@mui/icons-material/InsertLinkRounded";
+import CertCarousel from "./carousel";
 
-const About = () => {
-  const theme = createMuiTheme({
-    typography: {
-      fontFamily: ["Rubik", "sans-serif"].join(","),
-    },
-  });
-  const Heading = createMuiTheme({
-    typography: {
-      fontFamily: ["NeonderTHaw", "cursive"].join(","),
-    },
-  });
-  const isDesktop = useMediaQuery({
-    query: "(min-width: 768px)",
-  });
-  const style = {
-    color: "#854E60",
-    textAlign: "center",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-around",
-  };
-  const mobileStyle = {
-    color: "#854E60",
-    textAlign: "center",
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-    justifyContent: "space-around",
-  };
-  const imgStyle = {
-    maxWidth: "10rem",
-    marginTop: "2rem",
-    borderRadius: "10rem",
-  };
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1e1e1e" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
+
+export default function About() {
   return (
-    <>
-      <div style={{ paddingBottom: "1rem" }}>
-        <ThemeProvider theme={Heading}>
-          <Typography
-            variant="h3"
-            style={{ color: "#8A1D00", textAlign: "center", marginTop: "1rem" }}
-          >
-            About me
-          </Typography>
-        </ThemeProvider>
-
-        <ThemeProvider theme={theme}>
-          <Accordion
-            TransitionProps={{ unmountOnExit: true }}
-            style={{
-              marginTop: "2rem",
-              width: "80%",
-              marginInline: "auto",
-              backgroundColor: "#092626",
-              borderRadius: "1rem",
-              border: "none",
-            }}
-          >
+    <div id="about">
+      <div
+        style={{
+          textAlign: "center",
+          width: "60%",
+          marginInline: "auto",
+        }}
+      >
+        <h1>
+          <em style={{ color: "#8685EF" }}>About me</em>.
+        </h1>
+        <div
+          style={{ display: "flex", gap: "0.5rem", flexDirection: "column" }}
+        >
+          <Accordion>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "#fff" }} />}
+              expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography style={{ color: "white" }}>Who am I</Typography>
+              <Typography>Who am I?</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography
-                // variant="caption"
-                style={
-                  isDesktop
-                    ? {
-                        color: "#fff",
-                        // fontWeight: "normal",
-                        // marginTop: "4rem",
-                        width: "80%",
-                        marginInline: "auto",
-                        textAlign: "center",
-                      }
-                    : {
-                        fontSize: "1rem",
-                        color: "#fff",
-                        // fontWeight: "normal",
-                        // marginTop: "4rem",
-                        width: "80%",
-                        marginInline: "auto",
-                        textAlign: "center",
-                      }
-                }
-              >
+              <Typography>
                 I am Shafin Murani, A student and a freelance developer from
                 India. I have a deep drive towards developing and tinkering with
                 new pieces of technology.
-                <br />
-                <br />
-                As I see it privacy and anonimity of an individual or a
-                community is really important hence, I dived into cyber
-                security.
-                <br />
-                <br />
-                As a cyber security point of view and where I stand in the field
-                I believe in making lives of people private and secure from an
-                angle that everyone overlooks.
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion
-            TransitionProps={{ unmountOnExit: true }}
-            style={{
-              marginTop: "1rem",
-              width: "80%",
-              marginInline: "auto",
-              backgroundColor: "#092626",
-              borderRadius: "1rem",
-              border: "none",
-            }}
-          >
+          <Accordion>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "#fff" }} />}
+              expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography style={{ color: "white" }}>My projects</Typography>
+              <Typography>My Hobbies</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography
-                // variant="caption"
-                style={
-                  isDesktop
-                    ? {
-                        color: "#fff",
-                        // fontWeight: "normal",
-                        // marginTop: "4rem",
-                        width: "80%",
-                        marginInline: "auto",
-                        textAlign: "center",
-                      }
-                    : {
-                        fontSize: "1rem",
-                        color: "#fff",
-                        // fontWeight: "normal",
-                        // marginTop: "4rem",
-                        width: "80%",
-                        marginInline: "auto",
-                        textAlign: "center",
-                      }
-                }
-              >
-                I have worked on several projects for betterment of my skills.
-                Here are the links to some on my best works :<br />
-                <Button
-                  style={{ marginTop: "1rem" }}
-                  variant="contained"
-                  href="https://vartarevarta.com"
-                >
-                  VartaReVarta Magazine Website
-                </Button>
-                <br />
-                <Button
-                  style={{ marginTop: "1rem" }}
-                  variant="contained"
-                  href="https://shafinmurani.github.io/weather-app"
-                >
-                  Weather Web application
-                </Button>
-                <br />
-                <Button
-                  style={{ marginTop: "1rem" }}
-                  variant="contained"
-                  href="https://shafinmurani.github.io/notekeeper"
-                >
-                  Notekeeping application(persistent)
-                </Button>
-                <br />
-                <Button
-                  style={{ marginTop: "1rem" }}
-                  variant="contained"
-                  href="https://shafinmurani.github.io/twitter-ui-clone"
-                >
-                  Twitter UI Clone
-                </Button>
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion
-            TransitionProps={{ unmountOnExit: true }}
-            style={{
-              marginTop: "1rem",
-              width: "80%",
-              marginInline: "auto",
-              backgroundColor: "#092626",
-              borderRadius: "1rem",
-              border: "none",
-            }}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "#fff" }} />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography style={{ color: "white" }}>My hobbies</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography
-                // variant="caption"
-                style={
-                  isDesktop
-                    ? {
-                        color: "#fff",
-                        // fontWeight: "normal",
-                        // marginTop: "4rem",
-                        width: "80%",
-                        marginInline: "auto",
-                        textAlign: "center",
-                      }
-                    : {
-                        fontSize: "1rem",
-                        color: "#fff",
-                        // fontWeight: "normal",
-                        // marginTop: "4rem",
-                        width: "80%",
-                        marginInline: "auto",
-                        textAlign: "center",
-                      }
-                }
-              >
+              <Typography>
                 I maintain quite a few hobbies some make me a better person from
                 inside out whereas some guide me towards happiness but one of my
                 top priorities is not being the same person I was yesterday.
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion
-            TransitionProps={{ unmountOnExit: true }}
-            style={{
-              marginTop: "1rem",
-              width: "80%",
-              marginInline: "auto",
-              backgroundColor: "#092626",
-              borderRadius: "1rem",
-              border: "none",
-            }}
+        </div>
+        <h1>
+          <em style={{ color: "#8685EF" }}>Projects</em>.
+        </h1>{" "}
+        <div style={{ flexGrow: 1 }}>
+          <Grid
+            container
+            spacing={{ xs: 2, md: 3 }}
+            columns={{ xs: 4, sm: 8, md: 12 }}
           >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "#fff" }} />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography style={{ color: "white" }}>More about me</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography
-                // variant="caption"
-                style={
-                  isDesktop
-                    ? {
-                        color: "#fff",
-                        // fontWeight: "normal",
-                        // marginTop: "4rem",
-                        width: "80%",
-                        marginInline: "auto",
-                        textAlign: "center",
-                      }
-                    : {
-                        fontSize: "1rem",
-                        color: "#fff",
-                        // fontWeight: "normal",
-                        // marginTop: "4rem",
-                        width: "80%",
-                        marginInline: "auto",
-                        textAlign: "center",
-                      }
-                }
+            <Grid item xs={2} sm={4} md={4}>
+              <motion.div
+                style={{ height: "100%", width: "100%" }}
+                whileHover={{ marginBottom: "2rem", scale: 1.1 }}
               >
-                Just like every other person, I have my flaws but not letting
-                them be my weakness is what I strive for.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <div
-            style={{
-              width: "80%",
-              marginTop: "2rem",
-              marginInline: "auto",
-              textAlign: "center",
-            }}
-          >
-            <Typography>Here are some certificates I recieved</Typography>
-            <div
-              style={{
-                maxWidth: "30rem",
-                marginInline: "auto",
-                marginTop: "2rem",
-              }}
-            >
-              <CertCaeousel />
-            </div>
-          </div>
-          <div
-            style={{
-              width: "80%",
-              marginTop: "2rem",
-              marginInline: "auto",
-              textAlign: "center",
-            }}
-          >
-            <Typography>
-              Want to have a quick word with me? Check out the{" "}
-              <Link to="/contact">contact page</Link>{" "}
-            </Typography>
-          </div>
-        </ThemeProvider>
+                <Item>
+                  <Typography variant="body1">Notes Application</Typography>
+                  <br />
+                  <br />
+                  <Typography variant="caption2">
+                    This is a notes application which I made. It utilizes
+                    localStorage for persistence and is just a fun project I did
+                    by myself
+                  </Typography>
+                  <br />
+                  <br />
+                  <Button
+                    style={{ backgroundColor: "#ACA9BB" }}
+                    component="a"
+                    startIcon={<InsertLinkRoundedIcon />}
+                    href="https://shafinmurani.github.io/notekeeper/"
+                    variant="contained"
+                    size="small"
+                  >
+                    Visit
+                  </Button>
+                </Item>
+              </motion.div>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <motion.div
+                style={{ height: "100%", width: "100%" }}
+                whileHover={{ marginBottom: "2rem", scale: 1.1 }}
+              >
+                <Item>
+                  <Typography variant="body1">VartaReVarta Magazine</Typography>
+                  <br />
+                  <br />
+                  <Typography variant="caption2">
+                    It is a local magazine organisation and I helped them get an
+                    online presence.
+                  </Typography>
+                  <br />
+                  <br />
+                  <Button
+                    style={{ backgroundColor: "#ACA9BB" }}
+                    component="a"
+                    startIcon={<InsertLinkRoundedIcon />}
+                    href="https://vartarevarta.com"
+                    variant="contained"
+                    size="small"
+                  >
+                    Visit
+                  </Button>
+                </Item>
+              </motion.div>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <motion.div
+                style={{ height: "100%", width: "100%" }}
+                whileHover={{ marginBottom: "2rem", scale: 1.1 }}
+              >
+                <Item>
+                  <Typography variant="body1">Resume Generator</Typography>
+                  <br />
+                  <br />
+                  <Typography variant="caption2">
+                    Also one of my personal projects is a resume generator.
+                  </Typography>
+                  <br />
+                  <br />
+                  <Button
+                    startIcon={<InsertLinkRoundedIcon />}
+                    style={{ backgroundColor: "#ACA9BB" }}
+                    component="a"
+                    href="https://shafinmurani.github.io/resume-generator/"
+                    variant="contained"
+                    size="small"
+                  >
+                    {/* <InsertLinkRoundedIcon /> */}
+                    Visit
+                  </Button>
+                </Item>
+              </motion.div>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <motion.div
+                style={{ height: "100%", width: "100%" }}
+                whileHover={{ marginBottom: "2rem", scale: 1.1 }}
+              >
+                <Item>
+                  <Typography variant="body1">Weather Application</Typography>
+                  <br />
+                  <br />
+                  <Typography variant="caption2">
+                    This is a weather application which I made. It utilizes
+                    openWeather API and is just another fun project.
+                  </Typography>
+                  <br />
+                  <br />
+                  <Button
+                    component="a"
+                    startIcon={<InsertLinkRoundedIcon />}
+                    href="https://shafinmurani.github.io/weather-app/"
+                    style={{ backgroundColor: "#ACA9BB" }}
+                    variant="contained"
+                    size="small"
+                  >
+                    Visit
+                  </Button>
+                </Item>
+              </motion.div>
+            </Grid>
+          </Grid>
+        </div>
+        <h1>
+          <em style={{ color: "#8685EF" }}>Certifications</em>.
+        </h1>
+        <div style={{ width: "90%", marginInline: "auto" }}>
+          <CertCarousel />
+        </div>
       </div>
-    </>
+    </div>
   );
-};
-export default About;
+}

@@ -1,16 +1,13 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import cert1 from "../img/png/1.png";
 import cert2 from "../img/png/2.png";
 import cert3 from "../img/png/3.png";
 import cert4 from "../img/png/4.png";
 import cert5 from "../img/png/5.png";
 import cert6 from "../img/png/6.png";
 import cert7 from "../img/png/7.png";
-import cert8 from "../img/png/8.png";
 import cert9 from "../img/png/9.png";
-import cert10 from "../img/png/10.png";
 import cert11 from "../img/png/11.png";
 import cert12 from "../img/png/12.png";
 import cert13 from "../img/png/13.png";
@@ -39,7 +36,7 @@ const CertCarousel = () => {
     <Carousel
       autoPlay
       useKeyboardArrows
-      interval={2000}
+      interval={5000}
       showIndicators={false}
       dynamicHeight
       infiniteLoop
