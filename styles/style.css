@@ -272,3 +272,8 @@ span a {
     }
 
 }
+
+body {
+    overflow: hidden;
+    /* Hide scrollbars */
+}
