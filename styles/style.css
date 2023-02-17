@@ -273,7 +273,6 @@ span a {
 
 }
 
-body {
-    overflow: hidden;
-    /* Hide scrollbars */
+body::-webkit-scrollbar {
+    display: none;
 }
