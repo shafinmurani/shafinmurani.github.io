@@ -8,6 +8,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     color: #fff;
     padding-bottom: 9vh;
+    margin: 0;
 }
 
 .nav {
@@ -15,8 +16,8 @@ body {
     align-items: center;
     justify-content: space-evenly;
     /* width: 44rem; */
-    margin-top: 4rem;
-    margin-left: 2rem;
+    padding-top: 4rem;
+    padding-left: 2rem;
     /* outline: auto; */
 
 }
@@ -207,6 +208,40 @@ span a {
     font-family: 'PT Mono', monospace;
 }
 
+
+
+#circle {
+    background-color: white;
+    height: 32vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background-image: linear-gradient(to right top, #333829, #494f3b, #60684f, #788163, #919c78);
+    animation: rotate 70s infinite;
+    opacity: 0.4;
+    filter: blur(1rem);
+    z-index: -5;
+}
+
+
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        /* scale: 1 1.5; */
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .hero {
         flex-direction: column-reverse;
@@ -230,6 +265,10 @@ span a {
         position: absolute;
         bottom: -45vh;
         left: 0;
+    }
+
+    #circle {
+        visibility: hidden;
     }
 
 }
