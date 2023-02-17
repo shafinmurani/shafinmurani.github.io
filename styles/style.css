@@ -104,7 +104,7 @@ span a {
 
 .intro {
     font-size: 1.8rem;
-    line-height: 1rem;
+    /* line-height: 1rem; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -194,7 +194,7 @@ span a {
 }
 
 .footer {
-    position: absolute;
+    position: static;
     bottom: 0;
     left: 0;
     width: 100%;
