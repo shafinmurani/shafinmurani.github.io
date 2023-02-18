@@ -255,6 +255,8 @@ span a {
         flex-direction: column;
         margin-top: 1rem;
         margin-left: 0rem;
+        margin-inline: auto;
+        justify-self: center;
     }
 
     .links {

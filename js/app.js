@@ -27,8 +27,6 @@ document.body.onpointermove = (event) => {
       },
       { duration: 3000, fill: "forwards" }
     );
-    console.log(clientX);
-    console.log(clientY);
   }
   //   alert(navigator.userAgent);
 };
