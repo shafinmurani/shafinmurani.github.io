@@ -255,12 +255,18 @@ span a {
         flex-direction: column;
         margin-top: 1rem;
         margin-left: 0rem;
-        margin-inline: auto;
-        justify-self: center;
+        /* margin-inline: auto; */
+        /* justify-self: center; */
+    }
+
+    .nav p {
+        margin-right: 1rem;
     }
 
     .links {
         gap: 2rem;
+        margin-right: 1rem;
+
     }
 
     .footer {
