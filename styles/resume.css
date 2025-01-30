@@ -1,0 +1,160 @@
+.pill {
+    background-color: #1e1e1e;
+    color: #e4e4e4;
+    border-radius: 20px;
+    padding: 1px 10px;
+    margin-inline: 5px;
+    margin-block: 3px;
+    display: inline-block;
+    font-size: 0.8em;
+}
+
+.pill:not(:hover) {
+    animation: pill-unhover 0.2s forwards;
+}
+
+.pill:hover {
+    animation: pill-hover 0.2s forwards;
+    cursor: pointer;
+}
+
+.job {
+    background-color: #2e2e2e6c;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.job h2 {
+    color: #e4e4e4;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.job h3 {
+    color: #c4c4c4;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.job p {
+    color: #b4b4b4;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.job ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.job ul li {
+    color: #a4a4a4;
+    margin-bottom: 5px;
+}
+
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px;
+}
+
+.job {
+    background-color: #2e2e2e6c;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.download-resume {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.download-resume button {
+    background-color: #1e1e1e;
+    color: #e4e4e4;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.download-resume button:hover {
+    background-color: #0acc74;
+    color: #1e1e1e;
+}
+
+.download-resume button:not(:hover) {
+    animation: button-unhover 0.2s forwards;
+}
+
+@keyframes button-hover {
+    from {
+        background-color: #1e1e1e;
+        color: #e4e4e4;
+    }
+
+    to {
+        background-color: #0acc74;
+        color: #1e1e1e;
+    }
+}
+
+@keyframes button-unhover {
+    from {
+        background-color: #0acc74;
+        color: #1e1e1e;
+    }
+
+    to {
+        background-color: #1e1e1e;
+        color: #e4e4e4;
+    }
+}
+
+@media (max-width: 1000px) {
+    .job {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .job {
+        flex: 1 1 100%;
+    }
+}
+
+
+@keyframes pill-hover {
+    from {
+        background-color: #1e1e1e;
+        color: #e4e4e4;
+    }
+
+    to {
+        background-color: #0acc74;
+        color: #1e1e1e;
+    }
+}
+
+@keyframes pill-unhover {
+    from {
+        background-color: #0acc74;
+        color: #1e1e1e;
+    }
+
+    to {
+        background-color: #1e1e1e;
+        color: #e4e4e4;
+    }
+}
