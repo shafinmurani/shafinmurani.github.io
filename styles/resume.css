@@ -74,6 +74,11 @@
 }
 
 .download-resume {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin: 20px 0;
 }
@@ -125,6 +130,16 @@
 @media (max-width: 1000px) {
     .job {
         flex: 1 1 calc(50% - 40px);
+    }
+
+    .download-resume {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        margin: 20px 0;
     }
 }
 
