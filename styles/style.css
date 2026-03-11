@@ -56,7 +56,7 @@ body {
 .hero {
     margin-inline: auto;
     margin-top: 10vh;
-    justify-self: center;
+    justify-self: space-evenly;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
